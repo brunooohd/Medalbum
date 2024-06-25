@@ -1,34 +1,64 @@
-//
-//  puxando.swift
-//  Medalbum
-//
-//  Created by Bruno Dias on 24/06/24.
-//
-
-import Foundation
+import SwiftUI
 import Combine
 
 class APIService: ObservableObject {
-    @Published var scheduleData: Welcome?
+    @Published var schedules: [[String: Any]] = []
     
-    func fetchSchedule() {
-        guard let url = URL(string: "https://olympics.com/_next/data/_pr-2024_06_24T09_36_35.578Z/en/paris-2024/schedule/24-july.json?deviceType=desktop&countryCode=BR&path=paris-2024&path=schedule&path=24-july") else {
+    func fetchAndFindSchedules() {
+        guard let url = URL(string: "https://olympics.com/_next/data/_pr-2024_06_25T08_11_47.641Z/en/paris-2024/schedule/24-july.json?deviceType=desktop&countryCode=BR&path=paris-2024&path=schedule&path=24-july") else {
+            print("Invalid URL")
             return
         }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
-            if let data = data {
-                do {
-                    let decodedData = try JSONDecoder().decode(Welcome.self, from: data)
+            if let error = error {
+                print("Request error: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let data = data else {
+                print("No data received")
+                return
+            }
+            
+            do {
+                let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+                print("JSON received: \(jsonObject)")
+                if let schedules = self.extractSchedules(from: jsonObject) {
                     DispatchQueue.main.async {
-                     //   print(decodedData)
-                       self.scheduleData = decodedData
+                        self.schedules = schedules
+                        print("Schedules data extracted successfully:")
+                        for (index, schedule) in schedules.enumerated() {
+                            if let jsonData = try? JSONSerialization.data(withJSONObject: schedule, options: .prettyPrinted) {
+                                let jsonString = String(data: jsonData, encoding: .utf8) ?? "N/A"
+                                print("Schedule \(index + 1):\n\(jsonString)")
+                            }
+                        }
                     }
-                } catch {
-                    print(error)
-                    print("Erro ao decodificar JSON: \(error.localizedDescription)")
+                } else {
+                    DispatchQueue.main.async {
+                        print("No schedules found in the JSON data.")
+                    }
                 }
+            } catch {
+                print("Error decoding JSON: \(error.localizedDescription)")
             }
         }.resume()
     }
+    
+    private func extractSchedules(from json: Any) -> [[String: Any]]? {
+        if let dict = json as? [String: Any],
+           let pageProps = dict["pageProps"] as? [String: Any],
+           let page = pageProps["page"] as? [String: Any],
+           let items = page["items"] as? [[String: Any]] {
+            for item in items {
+                if let data = item["data"] as? [String: Any],
+                   let schedules = data["schedules"] as? [[String: Any]] {
+                    return schedules
+                }
+            }
+        }
+        return nil
+    }
 }
+

@@ -16,6 +16,9 @@
 		035167AD2C230CA5008EBE5C /* MedalbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035167AC2C230CA5008EBE5C /* MedalbumTests.swift */; };
 		035167B72C230CA5008EBE5C /* MedalbumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035167B62C230CA5008EBE5C /* MedalbumUITests.swift */; };
 		035167B92C230CA5008EBE5C /* MedalbumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035167B82C230CA5008EBE5C /* MedalbumUITestsLaunchTests.swift */; };
+		3F0E50AA2C2AEFE0009F76D7 /* UnitsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E50A92C2AEFE0009F76D7 /* UnitsAPIService.swift */; };
+		3F0E50AD2C2AF01F009F76D7 /* UnitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E50AC2C2AF01F009F76D7 /* UnitsView.swift */; };
+		3F0E50AF2C2AF180009F76D7 /* UnitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E50AE2C2AF180009F76D7 /* UnitDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		035167B22C230CA5008EBE5C /* MedalbumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedalbumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		035167B62C230CA5008EBE5C /* MedalbumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalbumUITests.swift; sourceTree = "<group>"; };
 		035167B82C230CA5008EBE5C /* MedalbumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalbumUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F0E50A92C2AEFE0009F76D7 /* UnitsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsAPIService.swift; sourceTree = "<group>"; };
+		3F0E50AC2C2AF01F009F76D7 /* UnitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsView.swift; sourceTree = "<group>"; };
+		3F0E50AE2C2AF180009F76D7 /* UnitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +104,14 @@
 		0351679A2C230CA4008EBE5C /* Medalbum */ = {
 			isa = PBXGroup;
 			children = (
+				3F0E50AB2C2AEFFA009F76D7 /* Views */,
 				0351679B2C230CA4008EBE5C /* MedalbumApp.swift */,
 				0351679D2C230CA4008EBE5C /* ContentView.swift */,
 				0351679F2C230CA5008EBE5C /* Assets.xcassets */,
 				035167A12C230CA5008EBE5C /* Preview Content */,
 				0349B0332C2996DA005E7A6C /* puxando.swift */,
 				0349B0352C299785005E7A6C /* testedestruct.swift */,
+				3F0E50AE2C2AF180009F76D7 /* UnitDetailView.swift */,
 			);
 			path = Medalbum;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				035167A22C230CA5008EBE5C /* Preview Assets.xcassets */,
+				3F0E50A92C2AEFE0009F76D7 /* UnitsAPIService.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -131,6 +140,14 @@
 				035167B82C230CA5008EBE5C /* MedalbumUITestsLaunchTests.swift */,
 			);
 			path = MedalbumUITests;
+			sourceTree = "<group>";
+		};
+		3F0E50AB2C2AEFFA009F76D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F0E50AC2C2AF01F009F76D7 /* UnitsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F0E50AA2C2AEFE0009F76D7 /* UnitsAPIService.swift in Sources */,
 				0351679E2C230CA4008EBE5C /* ContentView.swift in Sources */,
+				3F0E50AD2C2AF01F009F76D7 /* UnitsView.swift in Sources */,
+				3F0E50AF2C2AF180009F76D7 /* UnitDetailView.swift in Sources */,
 				0349B0362C299785005E7A6C /* testedestruct.swift in Sources */,
 				0351679C2C230CA4008EBE5C /* MedalbumApp.swift in Sources */,
 				0349B0342C2996DA005E7A6C /* puxando.swift in Sources */,
@@ -430,7 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Medalbum/Preview Content\"";
-				DEVELOPMENT_TEAM = 74Y2GWFGD7;
+				DEVELOPMENT_TEAM = J7T48SP5FT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -438,6 +458,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,7 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Medalbum/Preview Content\"";
-				DEVELOPMENT_TEAM = 74Y2GWFGD7;
+				DEVELOPMENT_TEAM = J7T48SP5FT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -467,6 +488,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

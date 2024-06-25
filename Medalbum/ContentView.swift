@@ -8,18 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var welcome: Welcome?
+    @StateObject private var apiService = APIService()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            List(apiService.schedules.indices, id: \.self) { index in
+                Text("Schedule \(index + 1)")
+            }
+            .onAppear {
+                apiService.fetchAndFindSchedules()
+            }
         }
-        .onAppear {
-            APIService().fetchSchedule() 
-        }
-        .padding()
     }
 }
 
