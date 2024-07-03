@@ -16,6 +16,9 @@
 		035167AD2C230CA5008EBE5C /* MedalbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035167AC2C230CA5008EBE5C /* MedalbumTests.swift */; };
 		035167B72C230CA5008EBE5C /* MedalbumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035167B62C230CA5008EBE5C /* MedalbumUITests.swift */; };
 		035167B92C230CA5008EBE5C /* MedalbumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035167B82C230CA5008EBE5C /* MedalbumUITestsLaunchTests.swift */; };
+		037A0D762C2C5AF8008B35BB /* CategoryTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A0D752C2C5AF8008B35BB /* CategoryTreatment.swift */; };
+		037A0D782C3314DB008B35BB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A0D772C3314DB008B35BB /* CardView.swift */; };
+		037A0D7A2C333A99008B35BB /* ExtractData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A0D792C333A99008B35BB /* ExtractData.swift */; };
 		3F0E50AA2C2AEFE0009F76D7 /* UnitsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E50A92C2AEFE0009F76D7 /* UnitsAPIService.swift */; };
 		3F0E50AD2C2AF01F009F76D7 /* UnitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E50AC2C2AF01F009F76D7 /* UnitsView.swift */; };
 		3F0E50AF2C2AF180009F76D7 /* UnitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E50AE2C2AF180009F76D7 /* UnitDetailView.swift */; };
@@ -51,6 +54,9 @@
 		035167B22C230CA5008EBE5C /* MedalbumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedalbumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		035167B62C230CA5008EBE5C /* MedalbumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalbumUITests.swift; sourceTree = "<group>"; };
 		035167B82C230CA5008EBE5C /* MedalbumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalbumUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		037A0D752C2C5AF8008B35BB /* CategoryTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTreatment.swift; sourceTree = "<group>"; };
+		037A0D772C3314DB008B35BB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		037A0D792C333A99008B35BB /* ExtractData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractData.swift; sourceTree = "<group>"; };
 		3F0E50A92C2AEFE0009F76D7 /* UnitsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsAPIService.swift; sourceTree = "<group>"; };
 		3F0E50AC2C2AF01F009F76D7 /* UnitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsView.swift; sourceTree = "<group>"; };
 		3F0E50AE2C2AF180009F76D7 /* UnitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailView.swift; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 		0351679A2C230CA4008EBE5C /* Medalbum */ = {
 			isa = PBXGroup;
 			children = (
+				037A0D742C2C5A75008B35BB /* Model */,
 				3F0E50AB2C2AEFFA009F76D7 /* Views */,
 				0351679B2C230CA4008EBE5C /* MedalbumApp.swift */,
 				0351679D2C230CA4008EBE5C /* ContentView.swift */,
@@ -142,10 +149,20 @@
 			path = MedalbumUITests;
 			sourceTree = "<group>";
 		};
+		037A0D742C2C5A75008B35BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				037A0D752C2C5AF8008B35BB /* CategoryTreatment.swift */,
+				037A0D792C333A99008B35BB /* ExtractData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3F0E50AB2C2AEFFA009F76D7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				3F0E50AC2C2AF01F009F76D7 /* UnitsView.swift */,
+				037A0D772C3314DB008B35BB /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,9 +298,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F0E50AA2C2AEFE0009F76D7 /* UnitsAPIService.swift in Sources */,
+				037A0D7A2C333A99008B35BB /* ExtractData.swift in Sources */,
+				037A0D782C3314DB008B35BB /* CardView.swift in Sources */,
 				0351679E2C230CA4008EBE5C /* ContentView.swift in Sources */,
 				3F0E50AD2C2AF01F009F76D7 /* UnitsView.swift in Sources */,
 				3F0E50AF2C2AF180009F76D7 /* UnitDetailView.swift in Sources */,
+				037A0D762C2C5AF8008B35BB /* CategoryTreatment.swift in Sources */,
 				0349B0362C299785005E7A6C /* testedestruct.swift in Sources */,
 				0351679C2C230CA4008EBE5C /* MedalbumApp.swift in Sources */,
 				0349B0342C2996DA005E7A6C /* puxando.swift in Sources */,
