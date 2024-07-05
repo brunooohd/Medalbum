@@ -12,15 +12,27 @@ struct UnitsView: View {
 
     var body: some View {
         NavigationView {
-            List(apiService.units) { unit in
-                NavigationLink(destination: UnitDetailView(unit: unit)) {
-                    Text(unit.description)
-                }
+            ScrollView{
+//                VStack(alignment:.leading){
+                    
+                    ForEach(apiService.units) { unit in
+                   
+//                        if categoryTreatment(code: unit.unitCode.prefix(3)) == "Tennis"{
+                                          
+                                            NavigationLink(destination: UnitDetailView(unit: unit)) {
+                                                
+                                                CardView(unit: unit)
+                                                
+                                                //                        Text(categoryTreatment(code: unit.unitCode.prefix(3)))
+                                            }
+//                        }
+                    }.listStyle(.plain)
+                        .onAppear {
+                            apiService.fetchAndExtractUnits()
+                        }
+                        .navigationTitle("Schedule")
+//                }
             }
-            .onAppear {
-                apiService.fetchAndExtractUnits()
-            }
-            .navigationTitle("Units")
         }
     }
 }

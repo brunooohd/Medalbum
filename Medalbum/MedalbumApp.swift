@@ -11,7 +11,7 @@ import SwiftUI
 struct MedalbumApp: App {
     var body: some Scene {
         WindowGroup {
-            UnitsView()
+            ContentView()
         }
     }
 }

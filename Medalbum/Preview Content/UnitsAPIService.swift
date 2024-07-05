@@ -9,6 +9,17 @@ import Foundation
 import SwiftUI
 import Combine
 
+struct Team1: Identifiable {
+    let id = UUID()
+    let teamCode: String
+    let description: String
+}
+
+struct Match1: Identifiable {
+    let id = UUID()
+    let team1: Team
+    let team2: Team
+}
 struct Unit: Identifiable {
     let id = UUID()
     let unitCode: String
@@ -17,13 +28,14 @@ struct Unit: Identifiable {
     let endDateTime: String
     let localStartDateTime: String
     let localEndDateTime: String
+    let match: Match1?
 }
 
 class UnitsAPIService: ObservableObject {
     @Published var units: [Unit] = []
     
     func fetchAndExtractUnits() {
-        guard let url = URL(string: "https://olympics.com/_next/data/_pr-2024_06_25T08_11_47.641Z/en/paris-2024/schedule/24-july.json?deviceType=desktop&countryCode=BR&path=paris-2024&path=schedule&path=24-july") else {
+        guard let url = URL(string: "https://olympics.com/_next/data/_pr-2024_07_03T13_23_20.330Z/en/paris-2024/schedule/24-july.json?deviceType=desktop&countryCode=BR&path=paris-2024&path=schedule&path=24-july") else {
             print("Invalid URL")
             return
         }
@@ -73,13 +85,31 @@ class UnitsAPIService: ObservableObject {
                                    let startDateTime = unitDict["startDateTimeUtc"] as? String,
                                    let endDateTime = unitDict["endDateTimeUtc"] as? String,
                                    let localStartDateTime = unitDict["localStartDateTime"] as? String,
-                                   let localEndDateTime = unitDict["localEndDateTime"] as? String {
+                                   let localEndDateTime = unitDict["localEndDateTime"] as? String
+                                {
+                                    var match: Match1? = nil
+                                                                        if let matchDict = unitDict["match"] as? [String: Any],
+                                                                           let team1Dict = matchDict["team1"] as? [String: Any],
+                                                                           let team2Dict = matchDict["team2"] as? [String: Any],
+                                                                           let team1Code = team1Dict["teamCode"] as? String,
+                                                                           let team1Description = team1Dict["description"] as? String,
+                                                                           let team2Code = team2Dict["teamCode"] as? String,
+                                                                           let team2Description = team2Dict["description"] as? String {
+                                                                            
+                                                                            let team1 = Team(teamCode: team1Code, description: team1Description)
+                                                                            let team2 = Team(teamCode: team2Code, description: team2Description)
+                                                                            match = Match1(team1: team1, team2: team2)
+                                                                        }
+
+                                    
                                     let unit = Unit(unitCode: unitCode,
                                                     description: description,
                                                     startDateTime: startDateTime,
                                                     endDateTime: endDateTime,
                                                     localStartDateTime: localStartDateTime,
-                                                    localEndDateTime: localEndDateTime)
+                                                    localEndDateTime: localEndDateTime,
+                                                    match: match
+                                    )
                                     extractedUnits.append(unit)
                                 }
                             }

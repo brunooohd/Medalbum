@@ -11,14 +11,25 @@ struct ContentView: View {
     @StateObject private var apiService = APIService()
     
     var body: some View {
-        VStack {
-            List(apiService.schedules.indices, id: \.self) { index in
-                Text("Schedule \(index + 1)")
-            }
-            .onAppear {
-                apiService.fetchAndFindSchedules()
-            }
-        }
+        TabView {
+                    Text("Live view")
+                        .tabItem {
+                            Image(systemName: "livephoto")
+                            Text("Live")
+                        }
+                    
+                    UnitsView()
+                        .tabItem {
+                            Image(systemName: "calendar")
+                            Text("Schedule")
+                        }
+                    
+                    Text("Album View")
+                        .tabItem {
+                            Image(systemName: "book.fill")
+                            Text("Album")
+                        }
+                }
     }
 }
 
