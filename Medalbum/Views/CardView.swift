@@ -9,10 +9,10 @@ struct CardView: View {
                 imageTreatment(code: unit.unitCode.prefix(3))
                     .resizable()
                     .frame(width: 20, height: 20)
-                    .foregroundColor(.black)
+                    .foregroundColor(.customBlue)
                     .padding(.trailing, 10)
                 Text(categoryTreatment(code: unit.unitCode.prefix(3)))
-                    .textStyle(size: 19, weight: .semibold)
+                    .textStyle(size: 19, weight: .semibold, color: .customBlue)
                 
                 Spacer()
                 
@@ -46,18 +46,17 @@ struct CardView: View {
                         Text(extractTime(from: unit.startDateTime) ?? "")
                             .textStyle(size: 14, weight: .medium, color: .gray)
                     }
-                    
-                    HStack {
-                        Text("End Time:")
-                            .textStyle(size: 14, weight: .semibold, color: .gray)
-                        Text(extractTime(from: unit.endDateTime) ?? "")
-                            .textStyle(size: 14, weight: .medium, color: .gray)
-                    }
                 }
+                
+                Spacer()
+                
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+                    .padding(.trailing, 10)
             }
             
         }
-        .padding()
+//        .padding()
         .background(Color.white)
         .cornerRadius(8)
     }

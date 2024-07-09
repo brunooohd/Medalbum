@@ -23,7 +23,7 @@ struct UnitsView: View {
                     TextField("Search", text: $searchText)
                         .textFieldStyle(PlainTextFieldStyle())
                         .padding(10)
-                    Image(systemName: "mic")
+                    Image(systemName: "mic.fill")
                         .foregroundColor(.gray)
                 }
                 .padding(.horizontal, 10)
@@ -42,7 +42,7 @@ struct UnitsView: View {
                                 .padding(.horizontal, 16)
                         }
                     }
-                    .padding(.horizontal, 16)
+                    .padding(.horizontal, 8)
                 }
             }
             .background(Color(UIColor.systemGroupedBackground)) 
