@@ -1,9 +1,3 @@
-//
-//  UnitDetailView.swift
-//  Medalbum
-//
-//  Created by Silvana Rodrigues Alves on 25/06/24.
-//
 
 import SwiftUI
 
@@ -31,7 +25,3 @@ struct UnitDetailView: View {
 }
 
 
-
-//#Preview {
-//    UnitDetailView(unit: <#Unit#>)
-//}

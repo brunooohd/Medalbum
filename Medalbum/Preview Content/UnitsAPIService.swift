@@ -1,9 +1,4 @@
-//
-//  UnitsAPIService.swift
-//  Medalbum
-//
-//  Created by Silvana Rodrigues Alves on 25/06/24.
-//
+
 
 import Foundation
 import SwiftUI

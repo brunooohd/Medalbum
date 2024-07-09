@@ -1,9 +1,3 @@
-//
-//  ImageTreatment.swift
-//  Medalbum
-//
-//  Created by Bruno Dias on 03/07/24.
-//
 
 import Foundation
 import SwiftUI
@@ -102,6 +96,6 @@ func imageTreatment (code: String.SubSequence) -> Image {
     case "WRE":
         return Image(systemName: "figure.wrestling")
     default:
-        return Image(systemName: "questionmark") // Handle unknown codes with a default icon
+        return Image(systemName: "questionmark") 
     }
 }

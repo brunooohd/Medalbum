@@ -1,9 +1,4 @@
-//
-//  CategoryTreatment.swift
-//  Medalbum
-//
-//  Created by Bruno Dias on 26/06/24.
-//
+
 
 import Foundation
 
@@ -100,6 +95,6 @@ func categoryTreatment (code: String.SubSequence) -> String {
     case "WRE":
         return "Wrestling"
     default:
-        return "" // Handle unknown codes (optional)
+        return "" 
     }
 }

@@ -1,9 +1,3 @@
-//
-//  MedalbumTests.swift
-//  MedalbumTests
-//
-//  Created by Bruno Dias on 19/06/24.
-//
 
 import XCTest
 @testable import Medalbum
