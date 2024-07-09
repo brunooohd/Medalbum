@@ -20,7 +20,7 @@ struct CardView: View {
                 
                 NavigationLink(destination: UnitDetailView(unit: unit)) {
                     Image(systemName: "chevron.right")
-                        .foregroundColor(.customYellow)
+                        .foregroundColor(.secondary)
                         .imageScale(.large)
                         .padding()
                 }

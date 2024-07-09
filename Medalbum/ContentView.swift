@@ -23,6 +23,7 @@ struct ContentView: View {
                     Text("Album")
                 }
         }
+        .accentColor(.customYellow) // Use your custom color here
     }
 }
 

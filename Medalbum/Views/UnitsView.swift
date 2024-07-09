@@ -34,7 +34,7 @@ struct UnitsView: View {
                                         .background(Color.white)
                                         .cornerRadius(10)
                     
-                    Image(systemName:"star.fill")
+                    Image(systemName:"ellipsis.circle")
                         .foregroundColor(.customYellow)
                         .onTapGesture {
                             showFavoritesOnly.toggle()
