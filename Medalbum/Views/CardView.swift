@@ -8,15 +8,21 @@ struct CardView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack {
-                imageTreatment(code: unit.unitCode.prefix(3))
-                    .resizable()
-                    .frame(width: 20, height: 20)
-                    .foregroundColor(.customBlue)
-                    .padding(.trailing, 5)
-                Text(categoryTreatment(code: unit.unitCode.prefix(3)))
-                    .textStyle(size: 19, weight: .semibold, color: .customBlue)
-                
-                Spacer()
+                   ZStack {
+                       RoundedRectangle(cornerRadius: 8)
+                           .fill(Color.customBlue)
+                           .frame(width: 30, height: 30)
+                       imageTreatment(code: unit.unitCode.prefix(3))
+                           .resizable()
+                           .frame(width: 20, height: 20)
+                           .foregroundColor(.white)
+                   }
+                   .padding(.trailing, 5)
+                   
+                   Text(categoryTreatment(code: unit.unitCode.prefix(3)))
+                       .textStyle(size: 19, weight: .semibold, color: .customBlue)
+                   
+                   Spacer()
                 
                 NavigationLink(destination: UnitDetailView(unit: unit)) {
                     Image(systemName: "chevron.right")
@@ -43,7 +49,7 @@ struct CardView: View {
             HStack {
                 VStack(alignment: .leading, spacing: 5) {
                     HStack {
-                        Text("Start Time:")
+                        Text("Starts at ")
                             .textStyle(size: 14, weight: .semibold, color: .gray)
                         Text(extractTime(from: unit.startDateTime) ?? "")
                             .textStyle(size: 14, weight: .medium, color: .gray)
