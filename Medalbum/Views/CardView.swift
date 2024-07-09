@@ -10,15 +10,22 @@ struct CardView: View {
                     .resizable()
                     .frame(width: 20, height: 20)
                     .foregroundColor(.black)
-                    .padding(.trailing, 10) 
+                    .padding(.trailing, 10)
                 Text(categoryTreatment(code: unit.unitCode.prefix(3)))
-                    .textStyle(size: 14, weight: .bold)
+                    .textStyle(size: 19, weight: .semibold)
                 
                 Spacer()
+                
+                NavigationLink(destination: UnitDetailView(unit: unit)) {
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.customBlue)
+                        .imageScale(.large)
+                        .padding()
+                }
             }
             
             Text(unit.description)
-                .textStyle(size: 14, weight: .medium)
+                .textStyle(size: 17, weight: .medium)
             
             if let match = unit.match {
                 VStack(alignment: .leading, spacing: 10) {
@@ -28,23 +35,24 @@ struct CardView: View {
                         
                         Spacer()
                     }
-                    
                 }
             }
             
-            VStack(alignment: .leading, spacing: 5) {
-                HStack {
-                    Text("Start Time:")
-                        .textStyle(size: 12, weight: .medium)
-                    Text(extractTime(from: unit.startDateTime) ?? "")
-                        .textStyle(size: 12, weight: .regular)
-                }
-                
-                HStack {
-                    Text("End Time:")
-                        .textStyle(size: 12, weight: .medium)
-                    Text(extractTime(from: unit.endDateTime) ?? "")
-                        .textStyle(size: 12, weight: .regular)
+            HStack {
+                VStack(alignment: .leading, spacing: 5) {
+                    HStack {
+                        Text("Start Time:")
+                            .textStyle(size: 14, weight: .semibold, color: .gray)
+                        Text(extractTime(from: unit.startDateTime) ?? "")
+                            .textStyle(size: 14, weight: .medium, color: .gray)
+                    }
+                    
+                    HStack {
+                        Text("End Time:")
+                            .textStyle(size: 14, weight: .semibold, color: .gray)
+                        Text(extractTime(from: unit.endDateTime) ?? "")
+                            .textStyle(size: 14, weight: .medium, color: .gray)
+                    }
                 }
             }
             
@@ -52,7 +60,6 @@ struct CardView: View {
         .padding()
         .background(Color.white)
         .cornerRadius(8)
-        .shadow(radius: 1)
     }
 }
 

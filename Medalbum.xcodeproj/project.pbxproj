@@ -24,6 +24,8 @@
 		3F0E50AD2C2AF01F009F76D7 /* UnitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E50AC2C2AF01F009F76D7 /* UnitsView.swift */; };
 		3F0E50AF2C2AF180009F76D7 /* UnitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E50AE2C2AF180009F76D7 /* UnitDetailView.swift */; };
 		3FB236F02C3D1BCA00A30977 /* TextStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB236EF2C3D1BCA00A30977 /* TextStyleModifier.swift */; };
+		3FB236F22C3DA4DB00A30977 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB236F12C3DA4DB00A30977 /* ScheduleView.swift */; };
+		3FB236F42C3DC49100A30977 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB236F32C3DC49100A30977 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		3F0E50AC2C2AF01F009F76D7 /* UnitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsView.swift; sourceTree = "<group>"; };
 		3F0E50AE2C2AF180009F76D7 /* UnitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailView.swift; sourceTree = "<group>"; };
 		3FB236EF2C3D1BCA00A30977 /* TextStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyleModifier.swift; sourceTree = "<group>"; };
+		3FB236F12C3DA4DB00A30977 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		3FB236F32C3DC49100A30977 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,7 @@
 				3F0E50AE2C2AF180009F76D7 /* UnitDetailView.swift */,
 				3F0E50AC2C2AF01F009F76D7 /* UnitsView.swift */,
 				037A0D772C3314DB008B35BB /* CardView.swift */,
+				3FB236F12C3DA4DB00A30977 /* ScheduleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				3FB236EF2C3D1BCA00A30977 /* TextStyleModifier.swift */,
+				3FB236F32C3DC49100A30977 /* Color.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -320,8 +326,10 @@
 				037A0D762C2C5AF8008B35BB /* CategoryTreatment.swift in Sources */,
 				0349B0362C299785005E7A6C /* testedestruct.swift in Sources */,
 				037A0D7C2C357B37008B35BB /* ImageTreatment.swift in Sources */,
+				3FB236F42C3DC49100A30977 /* Color.swift in Sources */,
 				0351679C2C230CA4008EBE5C /* MedalbumApp.swift in Sources */,
 				0349B0342C2996DA005E7A6C /* puxando.swift in Sources */,
+				3FB236F22C3DA4DB00A30977 /* ScheduleView.swift in Sources */,
 				3FB236F02C3D1BCA00A30977 /* TextStyleModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
