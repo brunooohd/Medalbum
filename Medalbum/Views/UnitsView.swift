@@ -6,16 +6,19 @@ struct UnitsView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(apiService.units) { unit in
-                    NavigationLink(destination: UnitDetailView(unit: unit)) {
-                        CardView(unit: unit)
+                LazyVStack(spacing: 16) { 
+                    ForEach(apiService.units) { unit in
+                        NavigationLink(destination: UnitDetailView(unit: unit)) {
+                            CardView(unit: unit)
+                                .padding(.horizontal, 16)
+                        }
                     }
                 }
-                .listStyle(.plain)
-                .onAppear {
-                    apiService.fetchAndExtractUnits()
-                }
-                .navigationTitle("Schedule")
+                .padding(.horizontal, 16)
+            }
+            .navigationTitle("Schedule")
+            .onAppear {
+                apiService.fetchAndExtractUnits()
             }
         }
     }
