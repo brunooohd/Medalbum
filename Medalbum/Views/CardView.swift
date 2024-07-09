@@ -2,15 +2,17 @@ import SwiftUI
 
 struct CardView: View {
     let unit: Unit
+    let isFavorite: Bool
+    let onFavoriteToggle: () -> Void
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 6) {
             HStack {
                 imageTreatment(code: unit.unitCode.prefix(3))
                     .resizable()
                     .frame(width: 20, height: 20)
                     .foregroundColor(.customBlue)
-                    .padding(.trailing, 10)
+                    .padding(.trailing, 5)
                 Text(categoryTreatment(code: unit.unitCode.prefix(3)))
                     .textStyle(size: 19, weight: .semibold, color: .customBlue)
                 
@@ -50,13 +52,14 @@ struct CardView: View {
                 
                 Spacer()
                 
-                Image(systemName: "star.fill")
+                Image(systemName: isFavorite ? "star.fill" : "star")
                     .foregroundColor(.customYellow)
                     .padding(.trailing, 10)
+                    .onTapGesture {
+                        onFavoriteToggle()
+                    }
             }
-            
         }
-//        .padding()
         .background(Color.white)
         .cornerRadius(8)
     }
@@ -64,14 +67,21 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(unit: Unit(
-            unitCode: "ARC",
-            description: "Archery",
-            startDateTime: "2024-07-09T20:00:00Z",
-            endDateTime: "2024-07-09T22:00:00Z",
-            localStartDateTime: "20:00",
-            localEndDateTime: "22:00",
-            match: Match1(team1: Team(teamCode: "BLR", description: "Blackburn Rovers"), team2: Team(teamCode: "SWA", description: "Swansea City"))
-        ))
+        CardView(
+            unit: Unit(
+                unitCode: "ARC",
+                description: "Archery",
+                startDateTime: "2024-07-09T20:00:00Z",
+                endDateTime: "2024-07-09T22:00:00Z",
+                localStartDateTime: "20:00",
+                localEndDateTime: "22:00",
+                match: Match1(
+                    team1: Team1(teamCode: "BLR", description: "Blackburn Rovers"),
+                    team2: Team1(teamCode: "SWA", description: "Swansea City")
+                )
+            ),
+            isFavorite: false,
+            onFavoriteToggle: {}
+        )
     }
 }
