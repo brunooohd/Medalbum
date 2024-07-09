@@ -18,7 +18,7 @@ struct CardView: View {
                 
                 NavigationLink(destination: UnitDetailView(unit: unit)) {
                     Image(systemName: "chevron.right")
-                        .foregroundColor(.customBlue)
+                        .foregroundColor(.customYellow)
                         .imageScale(.large)
                         .padding()
                 }
@@ -51,7 +51,7 @@ struct CardView: View {
                 Spacer()
                 
                 Image(systemName: "star.fill")
-                    .foregroundColor(.yellow)
+                    .foregroundColor(.customYellow)
                     .padding(.trailing, 10)
             }
             
