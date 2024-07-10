@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-                    Text("Live view")
+                    LiveView()
                         .tabItem {
                             Image(systemName: "livephoto")
                             Text("Live")

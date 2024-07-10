@@ -13,7 +13,6 @@ struct UnitsView: View {
     var body: some View {
         NavigationView {
             ScrollView{
-//                VStack(alignment:.leading){
                     
                     ForEach(apiService.units) { unit in
                    
@@ -31,7 +30,6 @@ struct UnitsView: View {
                             apiService.fetchAndExtractUnits()
                         }
                         .navigationTitle("Schedule")
-//                }
             }
         }
     }

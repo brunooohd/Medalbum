@@ -65,6 +65,10 @@ struct CardView: View {
                 }
             }.foregroundStyle(.black)
             .frame(height: 160)
+            .overlay(
+                                RoundedRectangle(cornerRadius: 25)
+                                    .stroke(Color.black, lineWidth: 1) // Define a borda
+                            )
             .padding()
         }
         
