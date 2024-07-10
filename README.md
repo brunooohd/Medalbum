@@ -1,10 +1,16 @@
 # Olympics Schedule App
 
+![MedAlbum Logo](iconLogo.png)
+
 This repository contains a study application developed to evaluate the behavior of the API that powers the schedule of the 2024 Olympics games. The application was built using SwiftUI to implement an interactive interface that allows users to see the games happening now and throughout the day.
 
 ## Overview
 
 The Olympics Schedule App consumes an API that returns data in JSON format about the 2024 Olympics games. The API provides detailed information about schedules, sports, groups, venues, and medals.
+
+## Study Focus
+
+This study focused on how to handle the request, manipulate the JSON to extract only the necessary information. The API used is a GET-only API.
 
 ## Features
 
@@ -25,7 +31,16 @@ The Olympics Schedule App consumes an API that returns data in JSON format about
 - **Views:** Contains the SwiftUI views that make up the user interface.
 - **ViewModels:** Contains the business and presentation logic, managing communication between Views and Models.
 
+## Screenshots
 
+### Home Screen
+![Home Screen](1.png)
+
+### Schedule Screen
+![Schedule Screen](2.png)
+
+### Filtered Schedule Screen
+![Filtered Schedule Screen](3.png)
 
 ## How to Run the Project
 
@@ -48,11 +63,10 @@ The Olympics Schedule App consumes an API that returns data in JSON format about
 
 The API used in this project provides detailed information about the schedule of the 2024 Olympics games. For more details about the API, refer to the [official API documentation](https://olympics.com).
 
-
-
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
+
 
 ---
 
