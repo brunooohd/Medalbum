@@ -65,7 +65,7 @@ The API used in this project provides detailed information about the schedule of
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
+This project is licensed under the MIT License. 
 
 
 ---
