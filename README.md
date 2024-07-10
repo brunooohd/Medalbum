@@ -39,7 +39,7 @@ This study focused on how to handle the request, manipulate the JSON to extract 
   <img src="1.png" alt="Home Screen" width="250"/>
   <img src="2.png" alt="Schedule Screen" width="250"/>
   <img src="3.png" alt="Filtered Schedule Screen" width="250"/>
-  <img src="schedule.gif" alt="Schedule GIF" width="750"/>
+  <img src="schedule.gif" alt="Schedule GIF" width="250"/>
 </div>
 
 ## How to Run the Project
