@@ -1,6 +1,8 @@
 # Olympics Schedule App
 
-![MedAlbum Logo](iconLogo.png)
+<div align="center">
+  <img src="iconLogo.png" alt="MedAlbum Logo" width="200"/>
+</div>
 
 This repository contains a study application developed to evaluate the behavior of the API that powers the schedule of the 2024 Olympics games. The application was built using SwiftUI to implement an interactive interface that allows users to see the games happening now and throughout the day.
 
@@ -33,14 +35,11 @@ This study focused on how to handle the request, manipulate the JSON to extract 
 
 ## Screenshots
 
-### Home Screen
-![Home Screen](1.png)
-
-### Schedule Screen
-![Schedule Screen](2.png)
-
-### Filtered Schedule Screen
-![Filtered Schedule Screen](3.png)
+<div align="center">
+  <img src="1.png" alt="Home Screen" width="300"/>
+  <img src="2.png" alt="Schedule Screen" width="300"/>
+  <img src="3.png" alt="Filtered Schedule Screen" width="300"/>
+</div>
 
 ## How to Run the Project
 
@@ -63,11 +62,16 @@ This study focused on how to handle the request, manipulate the JSON to extract 
 
 The API used in this project provides detailed information about the schedule of the 2024 Olympics games. For more details about the API, refer to the [official API documentation](https://olympics.com).
 
+## Contributions
+
+Contributions are welcome! If you have suggestions for improvements, feel free to open an issue or submit a pull request.
+
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
 
-
+## Contact
 ---
 
 Thank you for checking out this project! We hope you find it useful and informative.
+
