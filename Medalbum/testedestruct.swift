@@ -834,7 +834,7 @@ struct PageID: Codable {
 
 // MARK: - Schedule
 struct Schedule: Codable {
-    let units: [Unit]
+//    let units: [Unit]
     let discipline: ScheduleDiscipline
     let venue: Venue?
 }
@@ -844,28 +844,7 @@ struct ScheduleDiscipline: Codable {
     let disciplineCode, description: String
 }
 
-// MARK: - Unit
-struct Unit: Codable {
-    let unitCode: String
-     let start, startDateTimeUTC: String
-    let localStartDateTime: String
-    let end, endDateTimeUTC: String
-    let localEndDateTime: String
-    let estimated, estimatedStart: Bool
-    let startText, description, medal: String
-    let match: Match?
-    let venue: Venue?
 
-    enum CodingKeys: String, CodingKey {
-        case unitCode
-        case start
-        case startDateTimeUTC = "startDateTimeUtc"
-        case localStartDateTime
-        case end
-        case endDateTimeUTC = "endDateTimeUtc"
-        case localEndDateTime, estimated, estimatedStart, startText, description, medal, match, venue
-    }
-}
 
 // MARK: - Match
 struct Match: Codable {

@@ -16,6 +16,16 @@
 		035167AD2C230CA5008EBE5C /* MedalbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035167AC2C230CA5008EBE5C /* MedalbumTests.swift */; };
 		035167B72C230CA5008EBE5C /* MedalbumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035167B62C230CA5008EBE5C /* MedalbumUITests.swift */; };
 		035167B92C230CA5008EBE5C /* MedalbumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035167B82C230CA5008EBE5C /* MedalbumUITestsLaunchTests.swift */; };
+		037A0D762C2C5AF8008B35BB /* CategoryTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A0D752C2C5AF8008B35BB /* CategoryTreatment.swift */; };
+		037A0D782C3314DB008B35BB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A0D772C3314DB008B35BB /* CardView.swift */; };
+		037A0D7A2C333A99008B35BB /* ExtractData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A0D792C333A99008B35BB /* ExtractData.swift */; };
+		037A0D7C2C357B37008B35BB /* ImageTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A0D7B2C357B37008B35BB /* ImageTreatment.swift */; };
+		3F0E50AA2C2AEFE0009F76D7 /* UnitsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E50A92C2AEFE0009F76D7 /* UnitsAPIService.swift */; };
+		3F0E50AD2C2AF01F009F76D7 /* UnitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E50AC2C2AF01F009F76D7 /* UnitsView.swift */; };
+		3F0E50AF2C2AF180009F76D7 /* UnitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E50AE2C2AF180009F76D7 /* UnitDetailView.swift */; };
+		3FB236F02C3D1BCA00A30977 /* TextStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB236EF2C3D1BCA00A30977 /* TextStyleModifier.swift */; };
+		3FB236F22C3DA4DB00A30977 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB236F12C3DA4DB00A30977 /* ScheduleView.swift */; };
+		3FB236F42C3DC49100A30977 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB236F32C3DC49100A30977 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +58,16 @@
 		035167B22C230CA5008EBE5C /* MedalbumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedalbumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		035167B62C230CA5008EBE5C /* MedalbumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalbumUITests.swift; sourceTree = "<group>"; };
 		035167B82C230CA5008EBE5C /* MedalbumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalbumUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		037A0D752C2C5AF8008B35BB /* CategoryTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTreatment.swift; sourceTree = "<group>"; };
+		037A0D772C3314DB008B35BB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		037A0D792C333A99008B35BB /* ExtractData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractData.swift; sourceTree = "<group>"; };
+		037A0D7B2C357B37008B35BB /* ImageTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTreatment.swift; sourceTree = "<group>"; };
+		3F0E50A92C2AEFE0009F76D7 /* UnitsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsAPIService.swift; sourceTree = "<group>"; };
+		3F0E50AC2C2AF01F009F76D7 /* UnitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsView.swift; sourceTree = "<group>"; };
+		3F0E50AE2C2AF180009F76D7 /* UnitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailView.swift; sourceTree = "<group>"; };
+		3FB236EF2C3D1BCA00A30977 /* TextStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyleModifier.swift; sourceTree = "<group>"; };
+		3FB236F12C3DA4DB00A30977 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		3FB236F32C3DC49100A30977 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +118,15 @@
 		0351679A2C230CA4008EBE5C /* Medalbum */ = {
 			isa = PBXGroup;
 			children = (
+				3FB236EC2C3D132C00A30977 /* Features */,
+				037A0D742C2C5A75008B35BB /* Model */,
+				3F0E50AB2C2AEFFA009F76D7 /* Views */,
+				035167A12C230CA5008EBE5C /* Preview Content */,
 				0351679B2C230CA4008EBE5C /* MedalbumApp.swift */,
 				0351679D2C230CA4008EBE5C /* ContentView.swift */,
-				0351679F2C230CA5008EBE5C /* Assets.xcassets */,
-				035167A12C230CA5008EBE5C /* Preview Content */,
 				0349B0332C2996DA005E7A6C /* puxando.swift */,
 				0349B0352C299785005E7A6C /* testedestruct.swift */,
+				0351679F2C230CA5008EBE5C /* Assets.xcassets */,
 			);
 			path = Medalbum;
 			sourceTree = "<group>";
@@ -112,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				035167A22C230CA5008EBE5C /* Preview Assets.xcassets */,
+				3F0E50A92C2AEFE0009F76D7 /* UnitsAPIService.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -131,6 +155,36 @@
 				035167B82C230CA5008EBE5C /* MedalbumUITestsLaunchTests.swift */,
 			);
 			path = MedalbumUITests;
+			sourceTree = "<group>";
+		};
+		037A0D742C2C5A75008B35BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				037A0D752C2C5AF8008B35BB /* CategoryTreatment.swift */,
+				037A0D792C333A99008B35BB /* ExtractData.swift */,
+				037A0D7B2C357B37008B35BB /* ImageTreatment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F0E50AB2C2AEFFA009F76D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F0E50AE2C2AF180009F76D7 /* UnitDetailView.swift */,
+				3F0E50AC2C2AF01F009F76D7 /* UnitsView.swift */,
+				037A0D772C3314DB008B35BB /* CardView.swift */,
+				3FB236F12C3DA4DB00A30977 /* ScheduleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3FB236EC2C3D132C00A30977 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3FB236EF2C3D1BCA00A30977 /* TextStyleModifier.swift */,
+				3FB236F32C3DC49100A30977 /* Color.swift */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +317,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F0E50AA2C2AEFE0009F76D7 /* UnitsAPIService.swift in Sources */,
+				037A0D7A2C333A99008B35BB /* ExtractData.swift in Sources */,
+				037A0D782C3314DB008B35BB /* CardView.swift in Sources */,
 				0351679E2C230CA4008EBE5C /* ContentView.swift in Sources */,
+				3F0E50AD2C2AF01F009F76D7 /* UnitsView.swift in Sources */,
+				3F0E50AF2C2AF180009F76D7 /* UnitDetailView.swift in Sources */,
+				037A0D762C2C5AF8008B35BB /* CategoryTreatment.swift in Sources */,
 				0349B0362C299785005E7A6C /* testedestruct.swift in Sources */,
+				037A0D7C2C357B37008B35BB /* ImageTreatment.swift in Sources */,
+				3FB236F42C3DC49100A30977 /* Color.swift in Sources */,
 				0351679C2C230CA4008EBE5C /* MedalbumApp.swift in Sources */,
 				0349B0342C2996DA005E7A6C /* puxando.swift in Sources */,
+				3FB236F22C3DA4DB00A30977 /* ScheduleView.swift in Sources */,
+				3FB236F02C3D1BCA00A30977 /* TextStyleModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,17 +491,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Medalbum/Preview Content\"";
-				DEVELOPMENT_TEAM = 74Y2GWFGD7;
+				DEVELOPMENT_TEAM = J7T48SP5FT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,9 +512,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunohd.Medalbum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -456,17 +527,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Medalbum/Preview Content\"";
-				DEVELOPMENT_TEAM = 74Y2GWFGD7;
+				DEVELOPMENT_TEAM = J7T48SP5FT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,9 +548,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunohd.Medalbum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -487,7 +565,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 74Y2GWFGD7;
+				DEVELOPMENT_TEAM = J7T48SP5FT;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -507,7 +585,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 74Y2GWFGD7;
+				DEVELOPMENT_TEAM = J7T48SP5FT;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -526,7 +604,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 74Y2GWFGD7;
+				DEVELOPMENT_TEAM = J7T48SP5FT;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunohd.MedalbumUITests;
@@ -544,7 +622,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 74Y2GWFGD7;
+				DEVELOPMENT_TEAM = J7T48SP5FT;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunohd.MedalbumUITests;

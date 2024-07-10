@@ -1,9 +1,4 @@
-//
-//  MedalbumApp.swift
-//  Medalbum
-//
-//  Created by Bruno Dias on 19/06/24.
-//
+
 
 import SwiftUI
 
