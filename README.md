@@ -36,16 +36,16 @@ This study focused on how to handle the request, manipulate the JSON to extract 
 ## Screenshots
 
 <div align="center">
-  <img src="1.png" alt="Home Screen" width="300"/>
-  <img src="2.png" alt="Schedule Screen" width="300"/>
-  <img src="3.png" alt="Filtered Schedule Screen" width="300"/>
+  <img src="1.png" alt="Home Screen" width="250"/>
+  <img src="2.png" alt="Schedule Screen" width="250"/>
+  <img src="3.png" alt="Filtered Schedule Screen" width="250"/>
 </div>
 
 ## How to Run the Project
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/olympics-schedule-app.git
+    [git clone https://github.com/your-username/olympics-schedule-app.git](https://github.com/brunooohd/Medalbum.git)
     ```
 
 2. Open the project in Xcode:
