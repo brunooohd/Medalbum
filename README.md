@@ -25,7 +25,7 @@ The Olympics Schedule App consumes an API that returns data in JSON format about
 - **Views:** Contains the SwiftUI views that make up the user interface.
 - **ViewModels:** Contains the business and presentation logic, managing communication between Views and Models.
 
-- 
+
 
 ## How to Run the Project
 
