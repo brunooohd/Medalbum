@@ -8,7 +8,6 @@ The Olympics Schedule App consumes an API that returns data in JSON format about
 
 ## Features
 
-- **Live Games View:** See the games happening right now.
 - **Daily Schedule:** Check out the games scheduled throughout the day.
 - **Filter by Sport:** Filter games by sport.
 - **Favorites:** Mark and filter your favorite games for easy access.
@@ -25,6 +24,8 @@ The Olympics Schedule App consumes an API that returns data in JSON format about
 - **Models:** Contains the data structures that represent the information received from the API.
 - **Views:** Contains the SwiftUI views that make up the user interface.
 - **ViewModels:** Contains the business and presentation logic, managing communication between Views and Models.
+
+- 
 
 ## How to Run the Project
 
@@ -47,20 +48,11 @@ The Olympics Schedule App consumes an API that returns data in JSON format about
 
 The API used in this project provides detailed information about the schedule of the 2024 Olympics games. For more details about the API, refer to the [official API documentation](https://olympics.com).
 
-## Contributions
 
-Contributions are welcome! If you have suggestions for improvements, feel free to open an issue or submit a pull request.
 
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
-
-## Contact
-
-For questions or support, contact:
-- **Name:** Your Name
-- **Email:** your.email@example.com
-- **GitHub:** [your-username](https://github.com/your-username)
 
 ---
 
