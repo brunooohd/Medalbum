@@ -19,7 +19,8 @@ struct ContentView: View {
             
             Text("Album View")
                 .tabItem {
-                    Image(systemName: "book.fill")
+                    Image(systemName: "book")
+                        .environment(\.symbolVariants,.none)
                     Text("Album")
                 }
         }

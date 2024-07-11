@@ -29,7 +29,7 @@ class UnitsAPIService: ObservableObject {
     @Published var units: [Unit] = []
     
     func fetchAndExtractUnits() {
-        guard let url = URL(string: "https://olympics.com/_next/data/_pr-2024_07_10T12_04_30.036Z/en/paris-2024/schedule/25-july.json?deviceType=desktop&countryCode=BR&path=paris-2024&path=schedule&path=25-july") else {
+        guard let url = URL(string: "https://olympics.com/_next/data/_pr-2024_07_11T07_05_39.519Z/en/paris-2024/schedule/25-july.json?deviceType=desktop&countryCode=BR&path=paris-2024&path=schedule&path=25-july") else {
             print("Invalid URL")
             return
         }
