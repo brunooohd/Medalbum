@@ -24,6 +24,9 @@
 		3F0E50AD2C2AF01F009F76D7 /* UnitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E50AC2C2AF01F009F76D7 /* UnitsView.swift */; };
 		3F0E50AF2C2AF180009F76D7 /* UnitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E50AE2C2AF180009F76D7 /* UnitDetailView.swift */; };
 		3F7F4BBB2C3EEA32001378B9 /* LiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F4BBA2C3EEA32001378B9 /* LiveView.swift */; };
+		3F7F4BBD2C4044EE001378B9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F4BBC2C4044EE001378B9 /* Category.swift */; };
+		3F7F4BBF2C404547001378B9 /* PlaceholderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F4BBE2C404547001378B9 /* PlaceholderCardView.swift */; };
+		3F7F4BC12C404620001378B9 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F4BC02C404620001378B9 /* Unit.swift */; };
 		3FB236F02C3D1BCA00A30977 /* TextStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB236EF2C3D1BCA00A30977 /* TextStyleModifier.swift */; };
 		3FB236F22C3DA4DB00A30977 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB236F12C3DA4DB00A30977 /* ScheduleView.swift */; };
 		3FB236F42C3DC49100A30977 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB236F32C3DC49100A30977 /* Color.swift */; };
@@ -67,6 +70,9 @@
 		3F0E50AC2C2AF01F009F76D7 /* UnitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsView.swift; sourceTree = "<group>"; };
 		3F0E50AE2C2AF180009F76D7 /* UnitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailView.swift; sourceTree = "<group>"; };
 		3F7F4BBA2C3EEA32001378B9 /* LiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveView.swift; sourceTree = "<group>"; };
+		3F7F4BBC2C4044EE001378B9 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		3F7F4BBE2C404547001378B9 /* PlaceholderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderCardView.swift; sourceTree = "<group>"; };
+		3F7F4BC02C404620001378B9 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		3FB236EF2C3D1BCA00A30977 /* TextStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyleModifier.swift; sourceTree = "<group>"; };
 		3FB236F12C3DA4DB00A30977 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		3FB236F32C3DC49100A30977 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 				3F0E50AB2C2AEFFA009F76D7 /* Views */,
 				035167A12C230CA5008EBE5C /* Preview Content */,
 				0351679B2C230CA4008EBE5C /* MedalbumApp.swift */,
+				3F0E50A92C2AEFE0009F76D7 /* UnitsAPIService.swift */,
 				0351679D2C230CA4008EBE5C /* ContentView.swift */,
 				0349B0332C2996DA005E7A6C /* puxando.swift */,
 				0349B0352C299785005E7A6C /* testedestruct.swift */,
@@ -137,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				035167A22C230CA5008EBE5C /* Preview Assets.xcassets */,
-				3F0E50A92C2AEFE0009F76D7 /* UnitsAPIService.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 				037A0D752C2C5AF8008B35BB /* CategoryTreatment.swift */,
 				037A0D792C333A99008B35BB /* ExtractData.swift */,
 				037A0D7B2C357B37008B35BB /* ImageTreatment.swift */,
+				3F7F4BBC2C4044EE001378B9 /* Category.swift */,
+				3F7F4BC02C404620001378B9 /* Unit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +185,7 @@
 				037A0D772C3314DB008B35BB /* CardView.swift */,
 				3FB236F12C3DA4DB00A30977 /* ScheduleView.swift */,
 				3F7F4BBA2C3EEA32001378B9 /* LiveView.swift */,
+				3F7F4BBE2C404547001378B9 /* PlaceholderCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -323,11 +332,14 @@
 				3F0E50AA2C2AEFE0009F76D7 /* UnitsAPIService.swift in Sources */,
 				037A0D7A2C333A99008B35BB /* ExtractData.swift in Sources */,
 				037A0D782C3314DB008B35BB /* CardView.swift in Sources */,
+				3F7F4BC12C404620001378B9 /* Unit.swift in Sources */,
 				0351679E2C230CA4008EBE5C /* ContentView.swift in Sources */,
 				3F0E50AD2C2AF01F009F76D7 /* UnitsView.swift in Sources */,
 				3F0E50AF2C2AF180009F76D7 /* UnitDetailView.swift in Sources */,
 				3F7F4BBB2C3EEA32001378B9 /* LiveView.swift in Sources */,
+				3F7F4BBD2C4044EE001378B9 /* Category.swift in Sources */,
 				037A0D762C2C5AF8008B35BB /* CategoryTreatment.swift in Sources */,
+				3F7F4BBF2C404547001378B9 /* PlaceholderCardView.swift in Sources */,
 				0349B0362C299785005E7A6C /* testedestruct.swift in Sources */,
 				037A0D7C2C357B37008B35BB /* ImageTreatment.swift in Sources */,
 				3FB236F42C3DC49100A30977 /* Color.swift in Sources */,

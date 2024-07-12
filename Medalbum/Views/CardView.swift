@@ -8,21 +8,21 @@ struct CardView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack {
-                   ZStack {
-                       RoundedRectangle(cornerRadius: 8)
-                           .fill(Color.customBlue)
-                           .frame(width: 30, height: 30)
-                       imageTreatment(code: unit.unitCode.prefix(3))
-                           .resizable()
-                           .frame(width: 20, height: 20)
-                           .foregroundColor(.white)
-                   }
-                   .padding(.trailing, 5)
-                   
-                   Text(categoryTreatment(code: unit.unitCode.prefix(3)))
-                       .textStyle(size: 19, weight: .semibold, color: .customBlue)
-                   
-                   Spacer()
+                ZStack {
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(Color.customBlue)
+                        .frame(width: 30, height: 30)
+                    imageTreatment(code: unit.unitCode.prefix(3))
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.white)
+                }
+                .padding(.trailing, 5)
+                
+                Text(categoryTreatment(code: unit.unitCode.prefix(3)))
+                    .textStyle(size: 19, weight: .semibold, color: .customBlue)
+                
+                Spacer()
                 
                 NavigationLink(destination: UnitDetailView(unit: unit)) {
                     Image(systemName: "chevron.right")
@@ -43,6 +43,13 @@ struct CardView: View {
                         
                         Spacer()
                     }
+                }
+            }
+            
+            if let venue = unit.venue {
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("Venue: \(venue.description)")
+                        .textStyle(size: 14, weight: .medium, color: .gray)
                 }
             }
             
@@ -84,7 +91,8 @@ struct CardView_Previews: PreviewProvider {
                 match: Match1(
                     team1: Team1(teamCode: "BLR", description: "Blackburn Rovers"),
                     team2: Team1(teamCode: "SWA", description: "Swansea City")
-                )
+                ),
+                venue: EventVenue(venueCode: "PDP", description: "Parc des Princes")
             ),
             isFavorite: false,
             onFavoriteToggle: {}

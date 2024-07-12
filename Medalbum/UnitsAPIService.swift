@@ -1,35 +1,12 @@
-import Foundation
 import SwiftUI
 import Combine
-
-struct Team1: Identifiable {
-    let id = UUID()
-    let teamCode: String
-    let description: String
-}
-
-struct Match1: Identifiable {
-    let id = UUID()
-    let team1: Team1
-    let team2: Team1
-}
-
-struct Unit: Identifiable {
-    let id = UUID()
-    let unitCode: String
-    let description: String
-    let startDateTime: String
-    let endDateTime: String
-    let localStartDateTime: String
-    let localEndDateTime: String
-    let match: Match1?
-}
+import Foundation
 
 class UnitsAPIService: ObservableObject {
     @Published var units: [Unit] = []
     
     func fetchAndExtractUnits() {
-        guard let url = URL(string: "https://olympics.com/_next/data/_pr-2024_07_11T07_05_39.519Z/en/paris-2024/schedule/25-july.json?deviceType=desktop&countryCode=BR&path=paris-2024&path=schedule&path=25-july") else {
+        guard let url = URL(string: "https://olympics.com/_next/data/_pr-2024_07_12T10_27_07.697Z/en/paris-2024/schedule/25-july.json?deviceType=desktop&countryCode=BR&path=paris-2024&path=schedule&path=25-july") else {
             print("Invalid URL")
             return
         }
@@ -79,8 +56,7 @@ class UnitsAPIService: ObservableObject {
                                    let startDateTime = unitDict["startDateTimeUtc"] as? String,
                                    let endDateTime = unitDict["endDateTimeUtc"] as? String,
                                    let localStartDateTime = unitDict["localStartDateTime"] as? String,
-                                   let localEndDateTime = unitDict["localEndDateTime"] as? String
-                                {
+                                   let localEndDateTime = unitDict["localEndDateTime"] as? String {
                                     var match: Match1? = nil
                                     if let matchDict = unitDict["match"] as? [String: Any],
                                        let team1Dict = matchDict["team1"] as? [String: Any],
@@ -95,13 +71,21 @@ class UnitsAPIService: ObservableObject {
                                         match = Match1(team1: team1, team2: team2)
                                     }
                                     
+                                    var venue: EventVenue? = nil
+                                    if let venueDict = unitDict["venue"] as? [String: Any],
+                                       let venueCode = venueDict["venueCode"] as? String,
+                                       let venueDescription = venueDict["description"] as? String {
+                                        venue = EventVenue(venueCode: venueCode, description: venueDescription)
+                                    }
+                                    
                                     let unit = Unit(unitCode: unitCode,
                                                     description: description,
                                                     startDateTime: startDateTime,
                                                     endDateTime: endDateTime,
                                                     localStartDateTime: localStartDateTime,
                                                     localEndDateTime: localEndDateTime,
-                                                    match: match)
+                                                    match: match,
+                                                    venue: venue)
                                     extractedUnits.append(unit)
                                 }
                             }

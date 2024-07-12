@@ -66,8 +66,8 @@ struct UnitsView: View {
                 }
             }
             .background(Color(UIColor.systemGroupedBackground))
-            .navigationTitle("Schedule")
-            .navigationBarTitleDisplayMode(.large)
+            .navigationTitle("Schedule for July 25th")
+            .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 apiService.fetchAndExtractUnits()
             }
