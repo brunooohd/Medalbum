@@ -5,7 +5,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            Text("Live view")
+            LiveView()
                 .tabItem {
                     Image(systemName: "livephoto")
                     Text("Live")
@@ -19,7 +19,8 @@ struct ContentView: View {
             
             Text("Album View")
                 .tabItem {
-                    Image(systemName: "book.fill")
+                    Image(systemName: "book")
+                        .environment(\.symbolVariants,.none)
                     Text("Album")
                 }
         }
